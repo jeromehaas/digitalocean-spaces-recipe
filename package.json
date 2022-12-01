@@ -1,0 +1,34 @@
+{
+  "name": "spaces-gallery-poc",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "concurrently \"npm run styles\" \"npm run watch\" \"nodemon app.js\"",
+    "styles": "npm run styles:build & npm run styles:prefix & npm run styles:compress",
+    "styles:prefix": "postcss public/css/main.css --use-autoprefixer --map=false --output=css/main.css --watch",
+    "styles:build": "sass public/scss/main.scss public/css/main.css --watch",
+    "styles:compress": "sass public/scss/main.css public/css/main.css --style=compressed --watch",
+    "watch": "browser-sync start --files=**/* --ignore=node_modules"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.218.0",
+    "aws-sdk": "^2.895.0",
+    "body-parser": "^1.20.1",
+    "boxicons": "^2.1.4",
+    "browser-sync": "^2.27.10",
+    "concurrently": "^7.6.0",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-handlebars": "^6.0.6",
+    "hbs": "^4.2.0",
+    "multer": "^1.4.2",
+    "multer-s3": "^2.9.0",
+    "nodemon": "^2.0.20",
+    "postcss": "^8.4.19",
+    "sass": "^1.56.1"
+  },
+  "description": ""
+}

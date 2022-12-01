@@ -1,0 +1,16 @@
+.navigation {
+	background-color: $black;
+
+	&__inner {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: auto
+	}
+
+	&__icon {
+		text-align: center;
+		cursor: pointer;
+		color: $white;
+	}
+
+}

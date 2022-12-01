@@ -1,0 +1,684 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: "Open-Sans";
+  src: local("fonts/open-sans"), url("/fonts/open-sans/open-sans-light.ttf") format("ttf"), local("fonts/open-sans"), url("/fonts/open-sans/open-sans-light.woff") format("woff"), local("fonts/open-sans"), url("/fonts/open-sans/open-sans-light.woff2") format("woff2");
+  font-display: block;
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Open-Sans";
+  src: local("fonts/open-sans"), url("/fonts/open-sans/open-sans-regular.ttf") format("ttf"), local("fonts/open-sans"), url("/fonts/open-sans/open-sans-regular.woff") format("woff"), local("fonts/open-sans"), url("/fonts/open-sans/open-sans-regular.woff2") format("woff2");
+  font-display: block;
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Open-Sans";
+  src: local("fonts/open-sans"), url("/fonts/open-sans/open-sans-medium.ttf") format("ttf"), local("fonts/open-sans"), url("/fonts/open-sans/open-sans-medium.woff") format("woff"), local("fonts/open-sans"), url("/fonts/open-sans/open-sans-medium.woff2") format("woff2");
+  font-display: block;
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Open-Sans";
+  src: local("fonts/open-sans"), url("/fonts/open-sans/open-sans-semibold.ttf") format("ttf"), local("fonts/open-sans"), url("/fonts/open-sans/open-sans-semibold.woff") format("woff"), local("fonts/open-sans"), url("/fonts/open-sans/open-sans-semibold.woff2") format("woff2");
+  font-display: block;
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Open-Sans";
+  src: local("fonts/open-sans"), url("/fonts/open-sans/open-sans-bold.ttf") format("ttf"), local("fonts/open-sans"), url("/fonts/open-sans/open-sans-bold.woff") format("woff"), local("fonts/open-sans"), url("/fonts/open-sans/open-sans-bold.woff2") format("woff2");
+  font-display: block;
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Open-Sans";
+  src: local("fonts/open-sans"), url("/fonts/open-sans/open-sans-black.ttf") format("ttf"), local("fonts/open-sans"), url("/fonts/open-sans/open-sans-black.woff") format("woff"), local("fonts/open-sans"), url("/fonts/open-sans/open-sans-black.woff2") format("woff2");
+  font-display: block;
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Playfair-Display";
+  src: local("fonts/playfair-display"), url("/fonts/playfair-display/playfair-display-regular.ttf") format("ttf"), local("fonts/playfair-display"), url("/fonts/playfair-display/playfair-display-regular.woff") format("woff"), local("fonts/playfair-display"), url("/fonts/playfair-display/playfair-display-regular.woff2") format("woff2");
+  font-display: block;
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Playfair-Display";
+  src: local("fonts/playfair-display"), url("/fonts/playfair-display/playfair-display-regular-italic.ttf") format("ttf"), local("fonts/playfair-display"), url("/fonts/playfair-display/playfair-display-regular-italic.woff") format("woff"), local("fonts/playfair-display"), url("/fonts/playfair-display/playfair-display-regular-italic.woff2") format("woff2");
+  font-display: block;
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Playfair-Display";
+  src: local("fonts/playfair-display"), url("/fonts/playfair-display/playfair-display-medium.ttf") format("ttf"), local("fonts/playfair-display"), url("/fonts/playfair-display/playfair-display-medium.woff") format("woff"), local("fonts/playfair-display"), url("/fonts/playfair-display/playfair-display-medium.woff2") format("woff2");
+  font-display: block;
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Playfair-Display";
+  src: local("fonts/playfair-display"), url("/fonts/playfair-display/playfair-display-medium-italic.ttf") format("ttf"), local("fonts/playfair-display"), url("/fonts/playfair-display/playfair-display-medium-italic.woff") format("woff"), local("fonts/playfair-display"), url("/fonts/playfair-display/playfair-display-medium-italic.woff2") format("woff2");
+  font-display: block;
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Playfair-Display";
+  src: local("fonts/playfair-display"), url("/fonts/playfair-display/playfair-display-semibold.ttf") format("ttf"), local("fonts/playfair-display"), url("/fonts/playfair-display/playfair-display-semibold.woff") format("woff"), local("fonts/playfair-display"), url("/fonts/playfair-display/playfair-display-semibold.woff2") format("woff2");
+  font-display: block;
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Playfair-Display";
+  src: local("fonts/playfair-display"), url("/fonts/playfair-display/playfair-display-semibold-italic.ttf") format("ttf"), local("fonts/playfair-display"), url("/fonts/playfair-display/playfair-display-semibold-italic.woff") format("woff"), local("fonts/playfair-display"), url("/fonts/playfair-display/playfair-display-semibold-italic.woff2") format("woff2");
+  font-display: block;
+  font-weight: 600;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Playfair-Display";
+  src: local("fonts/playfair-display"), url("/fonts/playfair-display/playfair-display-bold.ttf") format("ttf"), local("fonts/playfair-display"), url("/fonts/playfair-display/playfair-display-bold.woff") format("woff"), local("fonts/playfair-display"), url("/fonts/playfair-display/playfair-display-bold.woff2") format("woff2");
+  font-display: block;
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Playfair-Display";
+  src: local("fonts/playfair-display"), url("/fonts/playfair-display/playfair-display-extrabold.ttf") format("ttf"), local("fonts/playfair-display"), url("/fonts/playfair-display/playfair-display-extrabold.woff") format("woff"), local("fonts/playfair-display"), url("/fonts/playfair-display/playfair-display-extrabold.woff2") format("woff2");
+  font-display: block;
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Playfair-Display";
+  src: local("fonts/playfair-display"), url("/fonts/playfair-display/playfair-display-extrabold-italic.ttf") format("ttf"), local("fonts/playfair-display"), url("/fonts/playfair-display/playfair-display-extrabold-italic.woff") format("woff"), local("fonts/playfair-display"), url("/fonts/playfair-display/playfair-display-extrabold-italic.woff2") format("woff2");
+  font-display: block;
+  font-weight: 800;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Playfair-Display";
+  src: local("fonts/playfair-display"), url("/fonts/playfair-display/playfair-display-black-italic.ttf") format("ttf"), local("fonts/playfair-display"), url("/fonts/playfair-display/playfair-display-black-italic.woff") format("woff"), local("fonts/playfair-display"), url("/fonts/playfair-display/playfair-display-black-italic.woff2") format("woff2");
+  font-display: block;
+  font-weight: 900;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Icon";
+  src: url("/fonts/icon/icon.eot");
+  src: url("/fonts/icon/icon.eot") format("embedded-opentype"), url("/fonts/icon/icon.woff2") format("woff2"), url("/fonts/icon/icon.woff") format("woff"), url("/fonts/icon/icon.ttf") format("truetype"), url("/fonts/icon/icon.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+.icon {
+  display: inline-block;
+  font: normal normal normal 16px "Icon";
+  color: inherit;
+  flex-shrink: 0;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon--small {
+  font-size: 12px;
+}
+
+.icon--medium {
+  font-size: 16px;
+}
+
+.icon--large {
+  font-size: 24px;
+}
+
+.icon--big {
+  font-size: 32px;
+}
+
+.icon--process::before {
+  content: "\ea35";
+}
+
+.icon--users::before {
+  content: "\ea45";
+}
+
+.icon--user::before {
+  content: "\ea46";
+}
+
+.icon--people::before {
+  content: "\ea4a";
+}
+
+.icon--settings::before {
+  content: "\ea4c";
+}
+
+.icon--umbrella::before {
+  content: "\ea4d";
+}
+
+.icon--close::before {
+  content: "\ea50";
+}
+
+.icon--repeat::before {
+  content: "\ea51";
+}
+
+.icon--arrow-up-left::before {
+  content: "\ea52";
+}
+
+.icon--arrow-down::before {
+  content: "\ea53";
+}
+
+.icon--arrow-down-right::before {
+  content: "\ea54";
+}
+
+.icon--arrow-down-left::before {
+  content: "\ea55";
+}
+
+.icon--arrow-left::before {
+  content: "\ea56";
+}
+
+.icon--arrow-up-right::before {
+  content: "\ea57";
+}
+
+.icon--arrow-up::before {
+  content: "\ea58";
+}
+
+.icon--dots-vertical::before {
+  content: "\ea59";
+}
+
+.icon--dots-horizontal::before {
+  content: "\ea5a";
+}
+
+.icon--chevron-down::before {
+  content: "\ea5b";
+}
+
+.icon--chevron-up::before {
+  content: "\ea5c";
+}
+
+.icon--arrow-right::before {
+  content: "\ea5d";
+}
+
+.icon--chevron-right::before {
+  content: "\ea5e";
+}
+
+.icon--chevron-left::before {
+  content: "\ea5f";
+}
+
+.icon--checkmark::before {
+  content: "\ea60";
+}
+
+.icon--caret-right::before {
+  content: "\ea62";
+}
+
+.icon--caret-left::before {
+  content: "\ea63";
+}
+
+.icon--narrow::before {
+  content: "\ea64";
+}
+
+.icon--expand::before {
+  content: "\ea65";
+}
+
+.icon--hamburger::before {
+  content: "\ea66";
+}
+
+.icon--dial::before {
+  content: "\ea68";
+}
+
+.icon--caret-up::before {
+  content: "\ea69";
+}
+
+.icon--caret-down::before {
+  content: "\ea6a";
+}
+
+.icon--navigator::before {
+  content: "\ea6d";
+}
+
+.icon--sun::before {
+  content: "\ea74";
+}
+
+.icon--light-bulb::before {
+  content: "\ea75";
+}
+
+.icon--configurator::before {
+  content: "\ea76";
+}
+
+.icon--camera::before {
+  content: "\ea7b";
+}
+
+.icon--thunder::before {
+  content: "\ea7c";
+}
+
+.icon--pen::before {
+  content: "\ea7d";
+}
+
+.icon--headphones::before {
+  content: "\ea80";
+}
+
+.icon--upload::before {
+  content: "\ea83";
+}
+
+.icon--download::before {
+  content: "\ea84";
+}
+
+.icon--chained::before {
+  content: "\ea85";
+}
+
+.icon--attachment::before {
+  content: "\ea87";
+}
+
+.icon--pin::before {
+  content: "\ea88";
+}
+
+.icon--unchain::before {
+  content: "\ea8a";
+}
+
+.icon--scissors::before {
+  content: "\ea8c";
+}
+
+.icon--block::before {
+  content: "\ea8f";
+}
+
+.icon--dots-circle::before {
+  content: "\ea90";
+}
+
+.icon--hearth::before {
+  content: "\ea93";
+}
+
+.icon--trash::before {
+  content: "\ea94";
+}
+
+.icon--calendar::before {
+  content: "\ea95";
+}
+
+.icon--star::before {
+  content: "\ea96";
+}
+
+.icon--trophy::before {
+  content: "\ea98";
+}
+
+.icon--cloud::before {
+  content: "\ea9a";
+}
+
+.icon--warning::before {
+  content: "\ea9b";
+}
+
+.icon--suitcase::before {
+  content: "\ea9d";
+}
+
+.icon--filter::before {
+  content: "\eaa0";
+}
+
+.icon--pie::before {
+  content: "\eaa2";
+}
+
+.icon--compass::before {
+  content: "\eaa3";
+}
+
+.icon--moon::before {
+  content: "\eaa4";
+}
+
+.icon--spinner::before {
+  content: "\eaa5";
+}
+
+.icon--dot::before {
+  content: "\eaa8";
+}
+
+.icon--external-link::before {
+  content: "\eaa9";
+}
+
+.icon--power::before {
+  content: "\eaaa";
+}
+
+.icon--educaty::before {
+  content: "\eaab";
+}
+
+.icon--statistics::before {
+  content: "\eaac";
+}
+
+.icon--questionmark-circle::before {
+  content: "\eaaf";
+}
+
+.icon--support::before {
+  content: "\eab0";
+}
+
+.icon--info-circle::before {
+  content: "\eab1";
+}
+
+.icon--search::before {
+  content: "\eab2";
+}
+
+.icon--certificate::before {
+  content: "\eab3";
+}
+
+.icon--minus-circle::before {
+  content: "\eab4";
+}
+
+.icon--message::before {
+  content: "\eab5";
+}
+
+.icon--eye-closed::before {
+  content: "\eab7";
+}
+
+.icon--eye::before {
+  content: "\eab8";
+}
+
+.icon--swap::before {
+  content: "\eab9";
+}
+
+.icon--timer::before {
+  content: "\eaba";
+}
+
+.icon--hourglass::before {
+  content: "\eabb";
+}
+
+.icon--bookmarks::before {
+  content: "\eabc";
+}
+
+.icon--bookmark::before {
+  content: "\eabd";
+}
+
+.icon--bookmarked::before {
+  content: "\eabe";
+}
+
+.icon--anchor::before {
+  content: "\eabf";
+}
+
+.icon--world::before {
+  content: "\eac0";
+}
+
+.icon--label::before {
+  content: "\eac1";
+}
+
+.icon--warning-triangle::before {
+  content: "\eac2";
+}
+
+.icon--check-circle::before {
+  content: "\eac3";
+}
+
+.icon--plus-circle::before {
+  content: "\eac4";
+}
+
+.icon--at::before {
+  content: "\eac5";
+}
+
+.icon--keyboard::before {
+  content: "\eac7";
+}
+
+.icon--key::before {
+  content: "\eac8";
+}
+
+.icon--paper::before {
+  content: "\eac9";
+}
+
+.icon--stamp::before {
+  content: "\eaca";
+}
+
+.icon--login::before {
+  content: "\eacb";
+}
+
+.icon--logout::before {
+  content: "\eacc";
+}
+
+.icon--twitter::before {
+  content: "\eacf";
+}
+
+.icon--linkedin::before {
+  content: "\ead0";
+}
+
+.icon--github::before {
+  content: "\ead1";
+}
+
+.icon--facebook::before {
+  content: "\ead2";
+}
+
+.icon--paypal::before {
+  content: "\ead3";
+}
+
+.icon--instagram::before {
+  content: "\ead4";
+}
+
+.icon--server::before {
+  content: "\ead5";
+}
+
+.icon--error-circle::before {
+  content: "\ead7";
+}
+
+.icon--desktop::before {
+  content: "\ead8";
+}
+
+.icon--envelope::before {
+  content: "\eada";
+}
+
+.icon--file::before {
+  content: "\eadb";
+}
+
+.icon--image::before {
+  content: "\eadc";
+}
+
+.icon--map::before {
+  content: "\eadd";
+}
+
+.icon--fire::before {
+  content: "\eade";
+}
+
+.icon--notifications::before {
+  content: "\eae0";
+}
+
+.icon--notifications-off::before {
+  content: "\eae1";
+}
+
+.icon--bug::before {
+  content: "\eae2";
+}
+
+.icon--clock::before {
+  content: "\eae3";
+}
+
+.icon--location::before {
+  content: "\eae4";
+}
+
+.icon--folder::before {
+  content: "\eae5";
+}
+
+.icon--laptop::before {
+  content: "\eae6";
+}
+
+.icon--printer::before {
+  content: "\eae7";
+}
+
+.icon--files::before {
+  content: "\eae8";
+}
+
+.icon--cart::before {
+  content: "\eae9";
+}
+
+.icon--phone::before {
+  content: "\eaea";
+}
+
+.icon--mobile::before {
+  content: "\eaeb";
+}
+
+.icon--locked::before {
+  content: "\eaec";
+}
+
+.icon--unlocked::before {
+  content: "\eaed";
+}
+
+* {
+  font-family: "Open-Sans", serif;
+  color: #000000;
+}
+
+.section__inner {
+  padding: 32px;
+}
+
+.page {
+  min-height: 100vh;
+  position: relative;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto 1fr auto;
+}
+
+.header {
+  background-color: #000000;
+}
+.header__title {
+  color: #ffffff;
+  text-align: center;
+}
+
+.navigation {
+  background-color: #000000;
+}
+.navigation__inner {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+}
+.navigation__icon {
+  text-align: center;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+/*# sourceMappingURL=main.css.map */
