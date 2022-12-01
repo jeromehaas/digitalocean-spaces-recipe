@@ -1,10 +1,17 @@
 <div class="upload section">
 	<div class="upload__inner section__inner">
 
-	<form class="upload__form" method="post" enctype="multipart/form-data" action="/image/multiple-upload">
-		<label for="file">Upload multiple files</label>
-		<input type="file" name="upload" multiple="true">
-		<input type="submit" class="button">
+	<form class="upload__form form" method="post" enctype="multipart/form-data" action="/image/multiple-upload">
+		<div class="input-file field">
+            <input class="input-file__fake-input field__fake-input" type="file" id="upload" name="upload" accept="image/png, image/gif, image/jpeg" multiple readonly />
+            <div class="input-file__input-container field__input-container input-container">
+                <input class="input-container__input field__input" type="text" placeholder="Select images" readonly />
+                <label class="input-container__button field__button button" for="upload">
+					<i class="button__icon icon icon--file"></i>
+				</label>
+            </div>
+        </div>
+		<button type="submit">Upload</button>
 	</form>
 
 	</div>

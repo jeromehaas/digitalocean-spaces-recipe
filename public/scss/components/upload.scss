@@ -1,0 +1,50 @@
+.upload {
+
+    &__form {
+        display: flex;
+    }
+
+    .input-file {
+        margin: 0 auto;
+        
+        &__input-container, .input-container {
+            display: flex;
+            flex-direction: row;
+            
+            &__input {
+                border: 1px solid black;
+                outline: none;
+                border-radius: 0;
+                box-shadow: none;
+                padding: 8px;
+
+                &::placeholder {
+                    color: black !important;
+                }
+
+            }
+
+            &__button, .button {
+                background-color: black;
+                background-repeat: no-repeat;
+                background-position: center;
+                width: 40px;
+                height: auto;
+                display: block;
+                display: grid;
+                place-items: center;
+
+                &__icon {
+                    color: white;
+                }
+            }
+
+        }
+        
+        &__fake-input {
+            display: none;
+        }
+        
+    }
+
+}

@@ -1,1 +1,7 @@
-<h2>haha nice h2</h2>
+<div class="gallery section">
+    <div class="gallery__inner section__inner">
+        {{#each data.items }}
+                <img class="gallery__item" src="https://hello-world.fra1.digitaloceanspaces.com/{{this.Key}}">
+        {{/each}}
+    </div>
+</div>

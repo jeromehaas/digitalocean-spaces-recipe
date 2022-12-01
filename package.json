@@ -16,6 +16,7 @@
   "dependencies": {
     "@aws-sdk/client-s3": "^3.218.0",
     "aws-sdk": "^2.895.0",
+    "axios": "^1.2.0",
     "body-parser": "^1.20.1",
     "boxicons": "^2.1.4",
     "browser-sync": "^2.27.10",
